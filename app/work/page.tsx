@@ -4,55 +4,49 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 
 // ==========================================
-// AREA DATA DINAMIS HALAMAN WORK
+// AREA DATA DINAMIS HALAMAN WORK (Logo sudah dihapus)
 // ==========================================
 const WORK_DATA = [
   {
-    title: "IndiHomeTV",
-    category: "Streaming • Video on Dema...",
-    coverImage: "https://placehold.co/600x600/e2e8f0/64748b?text=Cover+IndiHome",
-    logoImage: "https://placehold.co/120x40/ffffff/dc2626?text=Logo",
-    platforms: ["android", "apple", "web"],
+    title: "Training Management System (TMS)",
+    category: "Edtech • Process Automation • Web",
+    coverImage: "https://i.ibb.co.com/zWMwFCSQ/telkom.png",
+    platforms: ["web"],
     link: "#",
   },
   {
-    title: "JMO (BPJS Ketenagakerjaan)",
-    category: "Insurance • Finance",
-    coverImage: "https://placehold.co/600x600/e2e8f0/64748b?text=Cover+JMO",
-    logoImage: "https://placehold.co/120x40/ffffff/16a34a?text=Logo",
-    platforms: ["android", "apple"],
+    title: "Staff Performance Management Platform",
+    category: "GovTech • HR Optimization • Web",
+    coverImage: "https://i.ibb.co.com/21SFbrmN/kampus-merdeka.png",
+    platforms: ["web"],
     link: "#",
   },
   {
-    title: "Eraspace",
-    category: "E-Commerce • Lifestyle",
-    coverImage: "https://placehold.co/600x600/e2e8f0/64748b?text=Cover+Eraspace",
-    logoImage: "https://placehold.co/120x40/ffffff/4f46e5?text=Logo",
-    platforms: ["android", "apple"],
+    title: "E-Recruitment & Talent Acquisition",
+    category: "HR Tech • Workflow Streamlining • Web ",
+    coverImage: "https://i.ibb.co.com/VYqNkpZc/Screenshot-2026-03-06-at-08-10-42.png",
+    platforms: ["web"],
     link: "#",
   },
   {
-    title: "MRT Jakarta",
-    category: "Transportation • Lifestyle",
-    coverImage: "https://placehold.co/600x600/e2e8f0/64748b?text=Cover+MRT",
-    logoImage: "https://placehold.co/120x40/ffffff/2563eb?text=Logo",
-    platforms: ["android", "apple", "web"],
+    title: "Laboratory Asset Management System",
+    category: "Asset Management • Resource Oprimization • Web",
+    coverImage: "https://i.ibb.co.com/hFCT8Qbw/Screenshot-2026-03-05-at-16-24-33.png",
+    platforms: ["web"],
     link: "#",
   },
   {
-    title: "Paragon SFM",
-    category: "Productivity • Sales Force",
-    coverImage: "https://placehold.co/600x600/e2e8f0/64748b?text=Cover+Paragon",
-    logoImage: "https://placehold.co/120x40/ffffff/0f172a?text=Logo",
-    platforms: ["android", "web"],
+    title: "E-Posyandu E-Government Platform",
+    category: "GovTech • Digital Transformation",
+    coverImage: "https://i.ibb.co.com/Y428KJNT/Screenshot-2026-03-06-at-08-20-36.png",
+    platforms: ["web"],
     link: "#",
   },
   {
-    title: "TIX ID",
-    category: "Ticketing • Streaming • Vide...",
-    coverImage: "https://placehold.co/600x600/e2e8f0/64748b?text=Cover+TIX",
-    logoImage: "https://placehold.co/120x40/ffffff/0f172a?text=Logo",
-    platforms: ["android", "apple", "web"],
+    title: "Enterprise HR Recruitment Module",
+    category: "HRIS • Enterprise Solution",
+    coverImage: "https://i.ibb.co.com/7JWBxdp7/antam.png",
+    platforms: ["web"],
     link: "#",
   }
 ];
@@ -101,7 +95,7 @@ export default function Work() {
   return (
     <main className="min-h-screen bg-[#fafafa] text-zinc-900 font-sans selection:bg-zinc-200">
       
-      {/* 1. TOP STATUS BAR (Dikembalikan ke max-w-3xl agar sejajar) */}
+      {/* 1. TOP STATUS BAR */}
       <div className="border-b border-zinc-200 bg-white/50">
         <div className="max-w-3xl mx-auto px-6 py-2.5 flex flex-col sm:flex-row justify-between items-center gap-2 text-[11px] font-medium text-zinc-500 tracking-wide">
           <div className="flex items-center gap-5 w-full justify-between sm:justify-start">
@@ -111,13 +105,13 @@ export default function Work() {
             </span>
             <span className="hidden sm:flex items-center gap-1.5">
               <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-              6ce42e4
+                Hello, nice to meet you
             </span>
           </div>
         </div>
       </div>
 
-      {/* 2. MAIN NAVBAR (Dikembalikan ke max-w-3xl agar sejajar) */}
+      {/* 2. MAIN NAVBAR */}
       <nav className="max-w-3xl mx-auto px-6 py-6 flex justify-between items-center mb-8">
         <Link href="/">
           <div className="w-11 h-11 rounded-full overflow-hidden border border-zinc-200 shadow-sm bg-zinc-200 shrink-0 cursor-pointer">
@@ -125,7 +119,7 @@ export default function Work() {
           </div>
         </Link>
         <div className="flex items-center gap-6 text-[15px] font-medium text-zinc-800">
-         <Link href="/work" className="text-zinc-900 underline underline-offset-[6px] decoration-2 decoration-zinc-300 cursor-default hidden sm:block">Work</Link>
+          <Link href="/work" className="text-zinc-900 underline underline-offset-[6px] decoration-2 decoration-zinc-300 cursor-default hidden sm:block">Work</Link>
           <Link href="/about" className="hover:text-zinc-500 transition-colors hidden sm:block">About</Link>
           <Link href="/contact" className="hover:text-zinc-500 transition-colors hidden sm:block">Contact</Link>
           <button aria-label="Ganti Tema" className="hover:text-zinc-500 transition-colors ml-2">
@@ -136,20 +130,20 @@ export default function Work() {
         </div>
       </nav>
 
-      {/* 3. KONTEN HALAMAN WORK (Dikembalikan ke max-w-3xl agar sejajar) */}
+      {/* 3. KONTEN HALAMAN WORK */}
       <div className="max-w-3xl mx-auto px-6 pb-20">
         
         {/* Header Section */}
         <div className="text-center mb-16 pt-4">
           <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-900 mb-4">
-            I build ONLY what customers love
+           I orchestrate digital products that solve real problems
           </h1>
           <p className="text-[15px] text-zinc-500">
-            Beautifully designed, passionately engineered, and incredibly reliable
+          Strategically aligned, meticulously analyzed, and seamlessly delivered.
           </p>
         </div>
 
-        {/* MAPPING GRID PROJECT DINAMIS (Diubah jadi 2 Kolom 'sm:grid-cols-2') */}
+        {/* MAPPING GRID PROJECT DINAMIS (2 Kolom) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-12">
           {WORK_DATA.map((project, index) => (
             <div key={index} className="flex flex-col group cursor-pointer">
@@ -163,17 +157,8 @@ export default function Work() {
                 />
               </div>
 
-              {/* Logo Aplikasi */}
-              <div className="h-6 mb-3 flex items-center justify-start">
-                <img 
-                  src={project.logoImage} 
-                  alt={`${project.title} logo`} 
-                  className="h-full object-contain"
-                />
-              </div>
-
-              {/* Judul Aplikasi */}
-              <h3 className="text-[17px] font-bold text-zinc-900 mb-2">
+              {/* Judul Aplikasi (Logo image di bawah gambar sudah dihapus!) */}
+              <h3 className="text-[17px] font-bold text-zinc-900 mb-2 mt-1">
                 {project.title}
               </h3>
 
@@ -195,7 +180,7 @@ export default function Work() {
 
         {/* Footer */}
         <footer className="border-t border-zinc-200 pt-8 mt-24 text-sm text-zinc-400 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p>© {new Date().getFullYear()} Alwi Faisal.</p>
+          <p> Let's go {new Date().getFullYear()} Alwi Faisal.</p>
         </footer>
 
       </div>

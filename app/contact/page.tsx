@@ -52,7 +52,7 @@ export default function Contact() {
             </span>
             <span className="hidden sm:flex items-center gap-1.5">
               <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-              6ce42e4
+                Hello, nice to meet you
             </span>
           </div>
         </div>
@@ -81,7 +81,7 @@ export default function Contact() {
       {/* 3. KONTEN HALAMAN CONTACT */}
       <div className="max-w-3xl mx-auto px-6 pb-20">
         
-        {/* HERO SECTION (Teks Kiri, Gambar Kanan) */}
+        {/* HERO SECTION */}
         <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-20 relative">
           
           <div className="md:w-3/5 pt-4">
@@ -89,19 +89,24 @@ export default function Contact() {
               Let's get in touch
             </h1>
             <p className="text-lg text-zinc-600 leading-relaxed mb-6">
-              I am always open to new opportunities and collaborations. If you have any questions or need help with a project, <a href="#" className="text-zinc-900 underline underline-offset-4 decoration-zinc-300 hover:decoration-zinc-900 transition-colors">reach out to me via email</a>
-              <svg className="inline-block w-4 h-4 ml-1.5 text-zinc-400 hover:text-zinc-900 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              I am always open to new opportunities and collaborations. If you have any questions or need help with a project, 
+              
+              {/* --- BAGIAN LINK EMAIL --- */}
+              {/* GANTI 'emailkamu@gmail.com' DI BAWAH INI DENGAN EMAIL ASLIMU */}
+              <a href="mailto:alwifaisalz@gmail.com" className="text-zinc-900 underline underline-offset-4 decoration-zinc-300 hover:decoration-zinc-900 transition-colors ml-1">
+                reach out to me via email.
+              </a>
+              {/* <svg className="inline-block w-4 h-4 ml-1.5 text-zinc-400 hover:text-zinc-900 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-              </svg>
+              </svg> */}
             </p>
           </div>
 
           {/* Ilustrasi Pesawat Terbang Asli */}
-          <div className="md:w-2/5 flex justify-center md:justify-end hidden sm:flex pt-2">
+          <div className="md:w-2/5 flex justify-center md:justify-end sm:flex pt-2">
             <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
               {/* Garis lintasan terbang putus-putus */}
               <path d="M20 180 Q 60 160, 90 120 T 130 80" stroke="#27272a" strokeWidth="2.5" strokeDasharray="6 8" fill="none" strokeLinecap="round"/>
-              
               {/* Pesawat Komersial */}
               <g transform="translate(100, 20) scale(3.5)">
                 <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.2-1.1.6L3 8l6 5-3 3-3-1-2 2 4.5 1.5 1.5 4.5 2-2-1-3 3-3 5 6l1.2-.7c.4-.2.7-.6.6-1.1z" fill="#fafafa" stroke="#27272a" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
@@ -114,12 +119,21 @@ export default function Contact() {
         <section className="mb-24">
           <p className="text-[15px] text-zinc-500 mb-6">Feeling too formal via email? Hit me up on social media</p>
           <div className="flex flex-wrap gap-3">
-            <a href="#" className="px-5 py-2.5 rounded-full border border-zinc-200 text-[15px] font-medium text-zinc-700 hover:bg-zinc-100 hover:text-zinc-900 transition-colors">X</a>
-            <a href="#" className="px-5 py-2.5 rounded-full border border-zinc-200 text-[15px] font-medium text-zinc-700 hover:bg-zinc-100 hover:text-zinc-900 transition-colors">Threads</a>
-            <a href="#" className="px-5 py-2.5 rounded-full border border-zinc-200 text-[15px] font-medium text-zinc-700 hover:bg-zinc-100 hover:text-zinc-900 transition-colors">Figma</a>
-            <a href="#" className="px-5 py-2.5 rounded-full border border-zinc-200 text-[15px] font-medium text-zinc-700 hover:bg-zinc-100 hover:text-zinc-900 transition-colors">Instagram</a>
-            <a href="#" className="px-5 py-2.5 rounded-full border border-zinc-200 text-[15px] font-medium text-zinc-700 hover:bg-zinc-100 hover:text-zinc-900 transition-colors">GitHub</a>
-            <a href="#" className="px-5 py-2.5 rounded-full border border-zinc-200 text-[15px] font-medium text-zinc-700 hover:bg-zinc-100 hover:text-zinc-900 transition-colors">LinkedIn</a>
+            {/* --- BAGIAN LINK SOSIAL MEDIA --- */}
+            {/* Ganti link (href) di bawah ini sesuai dengan profil aslimu! */}
+            
+            <a href="https://x.com/alwifaisalz" target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 rounded-full border border-zinc-200 text-[15px] font-medium text-zinc-700 hover:bg-zinc-100 hover:text-zinc-900 transition-colors">
+              X
+            </a>
+            <a href="https://www.threads.com/@alwifaisaal" target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 rounded-full border border-zinc-200 text-[15px] font-medium text-zinc-700 hover:bg-zinc-100 hover:text-zinc-900 transition-colors">
+              Threads
+            </a>
+            <a href="https://www.instagram.com/alwifaisaal?igsh=MXYxNnBrNmJpNHI4dg==" target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 rounded-full border border-zinc-200 text-[15px] font-medium text-zinc-700 hover:bg-zinc-100 hover:text-zinc-900 transition-colors">
+              Instagram
+            </a>
+            <a href="https://www.linkedin.com/in/alwifaisalzulfikar/" target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 rounded-full border border-zinc-200 text-[15px] font-medium text-zinc-700 hover:bg-zinc-100 hover:text-zinc-900 transition-colors">
+              LinkedIn
+            </a>
           </div>
         </section>
 
@@ -128,17 +142,17 @@ export default function Contact() {
           <h2 className="text-3xl font-bold mb-8 text-zinc-900">Frequently asked question</h2>
           
           <div className="border-t border-zinc-200">
-            <AccordionItem title="Are you currently available for freelance?" defaultOpen={true}>
-              <p>Yes, I'm currently open for freelance opportunities.</p>
+            <AccordionItem title="Are you currently open to new opportunities or consulting?" defaultOpen={true}>
+              <p>While I am currently dedicated to my role as an IT Project Manager at Astranova International, I am always open to discussing exciting new opportunities, part-time consulting, or collaborative projects that align with my expertise in product strategy and system analysis. Let's connect!</p>
             </AccordionItem>
-            <AccordionItem title="Do you enjoy designing presentations?">
-              <p>Certainly! I enjoy designing presentations, especially for talks and workshops. Crafting engaging visual narratives is something I take pride in. If you need help with your presentation, I'd be more than happy to help!</p>
+            <AccordionItem title="What project management methodologies do you prefer?">
+              <p>I champion Agile and Scrum frameworks because they allow for swift, iterative releases and high responsiveness to changes. However, having worked with government (GovTech) and enterprise sectors, I am highly adaptable and can effectively utilize traditional methodologies (like Waterfall) when strict compliance and documentation are required.</p>
             </AccordionItem>
-            <AccordionItem title="Are you open to relocation if it's full-time job?">
-              <p>Yes, I'm open to relocation for the right opportunity. Exploring new places and cultures while pursuing meaningful work is something I look forward to.</p>
+            <AccordionItem title="Are you open to remote work or relocation?">
+              <p>Yes! I am based in the Greater Jakarta area (Jabodetabek) and am perfectly comfortable with hybrid or on-site arrangements here. I am also highly experienced in managing cross-functional teams remotely, so fully remote opportunities are very welcome.</p>
             </AccordionItem>
-            <AccordionItem title="Are you open to collaborate in open source design projects?">
-              <p>Absolutely! I love contributing to the community and am always excited to help out with open-source projects when I have the time.</p>
+            <AccordionItem title="Do you code, or do you strictly manage projects?">
+              <p>My current focus is strictly on project management, product ownership, and business analysis. However, my foundational background as a System Analyst and Helpdesk equips me with a deep understanding of technical architectures. I don't write the code today, but I speak the developers' language, allowing me to be the perfect bridge between engineering realities and business visions.</p>
             </AccordionItem>
           </div>
         </section>

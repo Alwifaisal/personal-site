@@ -8,34 +8,35 @@ import Link from "next/link";
 // ==========================================
 const PROJECTS_DATA = [
   {
-    title: "Page Automator",
-    description: "Automate the process of creating multiple pages effortlessly.",
+    title: "Asset Management Architecture",
+    description: "Architected the database schema and process flows for STIPAN’s inventory system to ensure accurate tracking and resource optimization.",
     // Nanti ganti URL ini menjadi "/nama-gambarmu.jpg"
-    image: "https://placehold.co/600x450/e2e8f0/64748b?text=Gambar+Proyek+1", 
+    image: "https://i.ibb.co.com/SwLN0qNq/stipan.jpg", 
     link: "#"
   },
   {
-    title: "Nataicons",
-    description: "A fun-themed simple open source icon library. Available as npm packages.",
-    image: "https://placehold.co/600x450/e2e8f0/64748b?text=Gambar+Proyek+2",
+    title: "E-Recruitment Workflow Design",
+    description: "Mapped out the end-to-end hiring workflow and system specifications to streamline the talent acquisition process at PT Motekar",
+    image: "https://i.ibb.co.com/Cpmpc5xP/Pt-motekar.jpg",
     link: "#"
   },
   {
-    title: "Variant Inspector",
-    description: "Makes it easy to get variant properties and place them above your code structure.",
-    image: "https://placehold.co/600x450/e2e8f0/64748b?text=Gambar+Proyek+3",
+    title: "E-Government System Blueprint",
+    description: "Designed the system architecture and technical documentation for Telkom Indonesia to support community-level healthcare digitalization.",
+    image: "https://i.ibb.co.com/p6H3jtMJ/telkom.jpg",
     link: "#"
   },
   {
-    title: "Quick New Page",
-    description: "Add new pages in a super quick way. It's a shortcut to do an awesome job.",
-    image: "https://placehold.co/600x450/e2e8f0/64748b?text=Gambar+Proyek+4",
+    title: "Performance Management Specs",
+    description: "ranslated complex HR evaluation processes into clear technical requirements and system flows for academic staff management.",
+    image: "https://i.ibb.co.com/W4xHtrTR/stipan-1.jpg",
     link: "#"
   }
 ];
 // ==========================================
 
 export default function Home() {
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [currentTime, setCurrentTime] = useState("Memuat waktu...");
 
   useEffect(() => {
@@ -64,7 +65,7 @@ export default function Home() {
             </span>
             <span className="hidden sm:flex items-center gap-1.5">
               <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-              6ce42e4
+              Hello, nice to meet you
             </span>
           </div>
         </div>
@@ -72,11 +73,19 @@ export default function Home() {
 
       {/* 2. MAIN NAVBAR */}
       <nav className="max-w-3xl mx-auto px-6 py-6 flex justify-between items-center mb-8">
-        <Link href="/">
+        {/* Ganti bagian profil dengan tombol ini */}
+        <button 
+          onClick={() => setIsProfileOpen(true)}
+          className="w-11 h-11 rounded-full overflow-hidden border border-zinc-200 shadow-sm bg-zinc-200 shrink-0 cursor-zoom-in hover:scale-105 transition-transform"
+          aria-label="Lihat foto profil"
+        >
+          <img src="/foto-profil.jpeg" alt="Alwi Faisal" className="w-full h-full object-cover" />
+        </button>
+        {/* <Link href="/">
           <div className="w-11 h-11 rounded-full overflow-hidden border border-zinc-200 shadow-sm bg-zinc-200 shrink-0 cursor-pointer">
             <img src="/foto-profil.jpeg" alt="Alwi Faisal" className="w-full h-full object-cover" />
           </div>
-        </Link>
+        </Link> */}
         <div className="flex items-center gap-6 text-[15px] font-medium text-zinc-800">
           <Link href="/work" className="hover:text-zinc-500 transition-colors hidden sm:block">Work</Link>
           <Link href="/about" className="hover:text-zinc-500 transition-colors hidden sm:block">About</Link>
@@ -95,10 +104,10 @@ export default function Home() {
         {/* --- SECTION 1: HERO --- */}
         <section className="mb-24 pt-4">
           <h1 className="text-4xl sm:text-[44px] leading-[1.15] font-bold tracking-tight mb-6 text-zinc-900">
-            Alwi is a web developer who specializes in user interfaces, design systems, and frontend strategy
+            Alwi is a strategic tech professional who specializes in IT project management, product ownership, and business analysis.
           </h1>
           <p className="text-[17px] text-zinc-600 leading-relaxed mb-8 sm:w-11/12">
-            Currently, I'm working as a freelance web developer, where I build robust platforms and digital experiences. Prior to this, I gained valuable experience working on various frontend projects and collaborations.
+            I bridge the critical gap between business objectives and technical execution. With a strong foundation in Informatics Engineering paired with an advanced degree in Communication Science, I possess a unique ability to translate complex technical jargon into clear, actionable business strategies. My professional journey includes hands-on experience as a web developer, where I learned how to build robust digital platforms from the inside out. Today, I am passionate about leading cross-functional teams, aligning stakeholder visions, and ensuring that every digital product we develop not only functions flawlessly but also drives measurable business transformation.
           </p>
         </section>
 
@@ -106,7 +115,7 @@ export default function Home() {
         <section className="mb-24">
           <h2 className="text-3xl font-bold mb-4 text-zinc-900">Featured Projects</h2>
           <p className="text-[15px] text-zinc-600 mb-10 leading-relaxed">
-            I have a strong interest in learning how to build scalable systems, and I aim to support my team in streamlining our workflow and improving our productivity by developing web utilities.
+           I specialize in identifying workflow bottlenecks and delivering scalable digital solutions. Here are some of the internal tools and systems I've managed and developed to significantly streamline team productivity and standardize development processes.
           </p>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -138,16 +147,17 @@ export default function Home() {
 
         {/* --- SECTION 3: I CAN HELP YOU WITH --- */}
         <section className="mb-24">
-          <h2 className="text-3xl font-bold mb-4 text-zinc-900">I can help you with</h2>
+          <h2 className="text-3xl font-bold mb-4 text-zinc-900">What I Bring to Your Team</h2>
           <p className="text-[15px] text-zinc-600 mb-10 leading-relaxed">
-            From end-to-end web development to UI integration. My focus is in achieving a balance between driving impactful business goals and delivering exceptional user experiences through clean code.
+           From defining product visions to orchestrating project executions. My focus is on bridging the gap between complex technical requirements and strategic business goals to deliver scalable, efficient, and user-centric digital solutions."
           </p>
           <div className="border-t border-zinc-200">
-            <div className="py-5 border-b border-zinc-200 font-bold text-lg text-zinc-900">End-to-end web development</div>
-            <div className="py-5 border-b border-zinc-200 font-bold text-lg text-zinc-900">Design systems integration</div>
-            <div className="py-5 border-b border-zinc-200 font-bold text-lg text-zinc-900">Frontend engineering</div>
-            <div className="py-5 border-b border-zinc-200 font-bold text-lg text-zinc-900">Web performance</div>
-            <div className="py-5 border-b border-zinc-200 font-bold text-lg text-zinc-900">API integration</div>
+            <div className="py-5 border-b border-zinc-200 font-bold text-lg text-zinc-900">IT Project Management</div>
+            <div className="py-5 border-b border-zinc-200 font-bold text-lg text-zinc-900">Business Requirements Analysis </div>
+            <div className="py-5 border-b border-zinc-200 font-bold text-lg text-zinc-900">Product Strategy & Ownership </div>
+            <div className="py-5 border-b border-zinc-200 font-bold text-lg text-zinc-900">Workflow & Process Optimization</div>
+            <div className="py-5 border-b border-zinc-200 font-bold text-lg text-zinc-900">Stakeholder Communication & Alignment</div>
+             <div className="py-5 border-b border-zinc-200 font-bold text-lg text-zinc-900">Change Management & Digital Adoption</div>
           </div>
         </section>
 
@@ -156,42 +166,42 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-10 text-zinc-900">Read what they say</h2>
           <div className="columns-1 sm:columns-2 gap-6 space-y-6">
             <div className="break-inside-avoid bg-[#f5f5f5] rounded-[24px] p-8">
-              <p className="text-[14px] text-zinc-700 leading-relaxed mb-6">"I have known Alwi for few years + working closely with him for a year now and all I can say is he is a passionate developer. He likes to use his time to exercise his code and open for feedback. Alwi is willing to learn about the users needs and behavior."</p>
+              <p className="text-[14px] text-zinc-700 leading-relaxed mb-6">"Alwi played a crucial role in our digital transformation. He has a rare ability to translate complex business goals into clear, actionable technical requirements. His strategic mindset and excellent communication skills made our development process significantly more efficient and aligned with our company vision."</p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-zinc-300 rounded-full shrink-0"></div>
+                {/* <div className="w-10 h-10 bg-zinc-300 rounded-full shrink-0"></div>  */}
                 <div>
-                  <h4 className="text-[13px] font-bold text-zinc-900">Thalia Shelyndra</h4>
-                  <p className="text-[11px] text-zinc-500">Project Manager</p>
+                  <h4 className="text-[13px] font-bold text-zinc-900">Vega Ismaryani</h4>
+                  <p className="text-[11px] text-zinc-500">CEO Astranova International</p>
                 </div>
               </div>
             </div>
             <div className="break-inside-avoid bg-[#f5f5f5] rounded-[24px] p-8">
-              <p className="text-[14px] text-zinc-700 leading-relaxed mb-6">"Alwi is a talented developer who excels at crafting websites and pays great attention to detail. Beyond his technical skills, he shines as a collaborative team player, providing critical input and bridging context gaps within our projects."</p>
+              <p className="text-[14px] text-zinc-700 leading-relaxed mb-6">"Having Alwi bridge the gap between stakeholders and the engineering team is a game-changer. He completely understands our technical constraints but always keeps the focus on the product's core value. He is a structured planner, a great problem-solver, and a highly collaborative team player."</p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-zinc-300 rounded-full shrink-0"></div>
+                {/* <div className="w-10 h-10 bg-zinc-300 rounded-full shrink-0"></div> */}
                 <div>
-                  <h4 className="text-[13px] font-bold text-zinc-900">Dara Tasha</h4>
-                  <p className="text-[11px] text-zinc-500">Design Manager</p>
+                  <h4 className="text-[13px] font-bold text-zinc-900">Putut Wibowo</h4>
+                  <p className="text-[11px] text-zinc-500">Direktur Teknologi Kampus Merdeka STIPAN</p>
                 </div>
               </div>
             </div>
             <div className="break-inside-avoid bg-[#f5f5f5] rounded-[24px] p-8">
-              <p className="text-[14px] text-zinc-700 leading-relaxed mb-6">"Alwi is really a great partner. We have working together multiple times. He has a great sense on how the product should be built. He knows about accessibility, and always put the user first. He is also a friendly individual, making it comfortable to collaborate with him."</p>
+              <p className="text-[14px] text-zinc-700 leading-relaxed mb-6">"Alwi's heuristic evaluation on our public service portal was an eye-opener. He doesn't just look at systems functionally; he deeply understands user behavior and accessibility. His actionable recommendations directly improved how we deliver digital services to the public."</p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-zinc-300 rounded-full shrink-0"></div>
+                {/* <div className="w-10 h-10 bg-zinc-300 rounded-full shrink-0"></div> */}
                 <div>
-                  <h4 className="text-[13px] font-bold text-zinc-900">Rezky Pangestu</h4>
-                  <p className="text-[11px] text-zinc-500">Frontend Engineer</p>
+                  <h4 className="text-[13px] font-bold text-zinc-900">Bambang Wijaya</h4>
+                  <p className="text-[11px] text-zinc-500">IT Manager Kementrian ESDM</p>
                 </div>
               </div>
             </div>
             <div className="break-inside-avoid bg-[#f5f5f5] rounded-[24px] p-8">
-              <p className="text-[14px] text-zinc-700 leading-relaxed mb-6">"Alwi is actually my role model. His coding skills are seriously amazing. He always comes up with creative ideas. It's not just about clean code; his ideas also help solve user problems. He's a supportive discussion partner and problem solver."</p>
+              <p className="text-[14px] text-zinc-700 leading-relaxed mb-6">"Alwi's unique blend of technical engineering expertise and advanced communication skills makes him an exceptional project driver. He took our scattered requirements and transformed them into a clear roadmap, ensuring the digital product was delivered smoothly, efficiently, and on target."</p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-zinc-300 rounded-full shrink-0"></div>
+                {/* <div className="w-10 h-10 bg-zinc-300 rounded-full shrink-0"></div> */}
                 <div>
-                  <h4 className="text-[13px] font-bold text-zinc-900">Diodona Maenggartama</h4>
-                  <p className="text-[11px] text-zinc-500">Product Designer</p>
+                  <h4 className="text-[13px] font-bold text-zinc-900">Sarah Ramadhan</h4>
+                  <p className="text-[11px] text-zinc-500">IT Sales Samudera Indonesia</p>
                 </div>
               </div>
             </div>
@@ -200,14 +210,38 @@ export default function Home() {
 
         {/* Footer */}
         <footer className="border-t border-zinc-200 pt-8 mt-12 text-sm text-zinc-400 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p>© {new Date().getFullYear()} Alwi Faisal.</p>
+          <p> Let's go {new Date().getFullYear()} Alwi Faisal.</p>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-zinc-900 transition-colors">Twitter</a>
-            <a href="#" className="hover:text-zinc-900 transition-colors">LinkedIn</a>
-          </div>
-        </footer>
+            <a href="#" className="hover:text-zinc-900 transition-colors">Competition makes us faster, collaboration makes us better.</a>
+          </div> 
+        </footer> 
 
       </div>
+      {/* TARUH KODE INI TEPAT DI ATAS </main> */}
+      {isProfileOpen && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center bg-white/80 backdrop-blur-sm p-4"
+          onClick={() => setIsProfileOpen(false)}
+        >
+          <div className="relative">
+            <img 
+              src="/foto-profil.jpeg" 
+              alt="Foto Profil Besar" 
+              className="w-48 h-48 sm:w-64 sm:h-64 object-cover rounded-full shadow-2xl border border-zinc-200 cursor-zoom-out"
+            />
+            <button 
+            title="Tutup foto"
+            aria-label="Tutup foto"
+              onClick={() => setIsProfileOpen(false)}
+              className="absolute -top-2 -right-2 bg-white text-zinc-500 hover:text-zinc-900 rounded-full p-1.5 shadow-md border border-zinc-200 transition-colors"
+            >
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
