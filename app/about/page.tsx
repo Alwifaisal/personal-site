@@ -88,7 +88,7 @@ export default function About() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-[#fafafa] text-zinc-900 font-sans selection:bg-zinc-200">
+    <main className="min-h-screen bg-[#fafafa] text-zinc-900 font-sans selection:bg-zinc-200 animate-slide-in">
       
       {/* 1. TOP STATUS BAR */}
       <div className="border-b border-zinc-200 bg-white/50">
