@@ -72,8 +72,10 @@ export default function Home() {
       </div>
 
       {/* 2. MAIN NAVBAR */}
+      {/* 2. MAIN NAVBAR */}
       <nav className="max-w-3xl mx-auto px-6 py-6 flex justify-between items-center mb-8">
-        {/* Ganti bagian profil dengan tombol ini */}
+        
+        {/* Tombol Foto Profil (Bisa di-zoom) */}
         <button 
           onClick={() => setIsProfileOpen(true)}
           className="w-11 h-11 rounded-full overflow-hidden border border-zinc-200 shadow-sm bg-zinc-200 shrink-0 cursor-zoom-in hover:scale-105 transition-transform"
@@ -81,16 +83,15 @@ export default function Home() {
         >
           <img src="/foto-profil.jpeg" alt="Alwi Faisal" className="w-full h-full object-cover" />
         </button>
-        {/* <Link href="/">
-          <div className="w-11 h-11 rounded-full overflow-hidden border border-zinc-200 shadow-sm bg-zinc-200 shrink-0 cursor-pointer">
-            <img src="/foto-profil.jpeg" alt="Alwi Faisal" className="w-full h-full object-cover" />
-          </div>
-        </Link> */}
-        <div className="flex items-center gap-6 text-[15px] font-medium text-zinc-800">
-          <Link href="/work" className="hover:text-zinc-500 transition-colors hidden sm:block">Work</Link>
-          <Link href="/about" className="hover:text-zinc-500 transition-colors hidden sm:block">About</Link>
-          <Link href="/contact" className="hover:text-zinc-500 transition-colors hidden sm:block">Contact</Link>
-          <button aria-label="Ganti Tema" className="hover:text-zinc-500 transition-colors ml-2">
+
+        {/* Menu Links (Responsive untuk HP) */}
+        <div className="flex items-center gap-3 sm:gap-6 text-[14px] sm:text-[15px] font-medium text-zinc-800">
+          <Link href="/work" className="hover:text-zinc-500 transition-colors">Work</Link>
+          <Link href="/about" className="hover:text-zinc-500 transition-colors">About</Link>
+          <Link href="/contact" className="hover:text-zinc-500 transition-colors">Contact</Link>
+          
+          {/* Tombol Tema (Smiley) */}
+          <button aria-label="Ganti Tema" className="hover:text-zinc-500 transition-colors ml-2 sm:ml-0">
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm5.25 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75z" />
             </svg>
